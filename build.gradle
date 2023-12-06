@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.eclipse.persistence:org.eclipse.persistence.jpa:4.0.2'
+    runtimeOnly 'org.postgresql:postgresql:42.7.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'com.github.luisfpg.Main'
+}
